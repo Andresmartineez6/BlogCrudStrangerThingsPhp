@@ -2,6 +2,7 @@
 
 require_once("db/conexionDatabase.php");
 
+
 class Usuario{
 
     private $db;

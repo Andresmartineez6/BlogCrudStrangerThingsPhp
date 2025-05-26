@@ -21,4 +21,6 @@ class Post {
         return $consulta->fetchAll(PDO::FETCH_ASSOC);
 
     }
+
+    
 }
