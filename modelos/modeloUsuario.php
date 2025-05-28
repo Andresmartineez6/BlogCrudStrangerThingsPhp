@@ -15,14 +15,14 @@ class Usuario{
 
 
 
-    public function autenticar($email,$password){
-        $sentencia="SELECT * FROM usuarios WHERE email = ?";
-
-        $consulta=$this->db->prepare($sentencia);
+    public function autenticar($email, $password) {
+        $sentencia = "SELECT * FROM usuarios WHERE email = ?";
+        $consulta = $this->db->prepare($sentencia);
         $consulta->execute([$email]);
-        $usuario=$consulta->fetch(PDO::FETCH_ASSOC);
+        $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
-        if($usuario && password_verify($password, $usuario['password'])){
+        //verifico si se encontró el usuario y si la contraseña coincide
+        if($usuario && $password === $usuario['password']) {
             return $usuario;
         }
 
