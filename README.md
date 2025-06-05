@@ -103,12 +103,12 @@ Panel de administración completo para la gestión de contenido.
 ## 💬 Acceso de prueba
 
 - **Administrador**:
-  - Email: admin@stranger.com
-  - Contraseña: admin123
+  - Email: admin@blog.com
+  - Contraseña: 1234
 
 - **Usuario estándar**:
-  - Email: usuario@stranger.com
-  - Contraseña: user123
+  - Email: franmorales@eag.com
+  - Contraseña: 1234
 
 ## 💥 Licencia
 
