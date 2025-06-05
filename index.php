@@ -59,71 +59,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2') format('woff2');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        body {
-            font-family: 'Netflix Sans', sans-serif;
-        }
-        
-        .netflix-bg {
-            background-color: black;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                             url("assets/imgs/temporada 5 stranger things.jpg");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .login-container {
-            background-color: rgba(0, 0, 0, 0.85);
-            border-radius: 4px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
-        }
-
-        .btn-netflix {
-            background-color: #E50914;
-            transition: all 0.2s ease;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-netflix:hover {
-            background-color: #F40612;
-        }
-
-        .netflix-input {
-            background-color: #333;
-            border: none;
-            color: white;
-            padding: 16px 20px;
-            border-radius: 4px;
-        }
-
-        .netflix-input:focus {
-            background-color: #454545;
-            outline: none;
-        }
-        
-        .stranger-title {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #E50914;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        }
-    </style>
 </head>
 
 <body class="netflix-bg">
@@ -133,7 +68,7 @@
         <div class="max-w-md w-full space-y-8 login-container p-8">
             <div>
                 <h1 class="text-center font-extrabold stranger-title flicker">
-                    <img src="assets/imgs/logo.png" alt="Stranger Things" class="mx-auto" style="height: 80px; width: auto; max-width: 280px; object-fit: contain;">
+                    <img src="assets/imgs/logo.png" alt="Stranger Things" class="mx-auto logo-image">
                 </h1>
                 <p class="mt-2 text-center text-sm text-gray-400">Tu portal al mundo del revés</p>
                 <h2 class="mt-6 text-center text-2xl font-bold text-white">Inicia sesión en tu cuenta</h2>

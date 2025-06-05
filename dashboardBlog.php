@@ -111,6 +111,7 @@
 
     // Procesar formulario de actualización
     if (isset($_POST['accion']) && $_POST['accion'] == 'actualizar') {
+
         $id = $_POST['id'];
         $titulo = trim($_POST['titulo']);
         $contenido = trim($_POST['contenido']);
@@ -118,9 +119,11 @@
         $categoria_id = $_POST['categoria_id'];
         $imagen = null;
         
+
         // Si no es admin, verificar que la entrada le pertenezca
         $puedeActualizar = $esAdmin;
         
+
         if (!$esAdmin) {
             // Obtener la entrada actual para verificar si el autor coincide con el usuario actual
             $entradaActual = $modeloEntradas->obtenerPorId($id);
@@ -129,6 +132,7 @@
             }
         }
         
+
         if ($puedeActualizar) {
             // Procesar imagen si se ha subido alguna
             if (isset($_FILES['imagen']) && $_FILES['imagen']['error'] == 0) {
@@ -176,14 +180,18 @@
             }
             
             if (!isset($mensaje) && !empty($titulo) && !empty($contenido) && !empty($autor) && !empty($categoria_id)) {
+               
                 $modeloEntradas->actualizarEntrada($id, $titulo, $contenido, $autor, $categoria_id, $imagen);
                 $mensaje = "Entrada actualizada con éxito";
                 $tipoMensaje = "exito";
             } else if (!isset($mensaje)) {
+
                 $mensaje = "Todos los campos son obligatorios";
                 $tipoMensaje = "error";
             }
+            
         } else {
+
             $mensaje = "No tienes permisos para actualizar esta entrada";
             $tipoMensaje = "error";
         }
@@ -221,6 +229,7 @@
 
     // Obtener todas las entradas
     $entradas = $modeloEntradas->obtenerTodas();
+
 ?>
 
 
@@ -233,78 +242,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-
-    <style>
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2') format('woff2');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        body {
-            font-family: 'Netflix Sans', sans-serif;
-        }
-        
-        .dashboard-bg {
-            background-color: #000;
-            background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-                url('assets/imgs/temporada 5 stranger things.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        .content-card {
-            background-color: rgba(20, 20, 20, 0.9);
-            border: 1px solid rgba(229, 9, 20, 0.3);
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
-        }
-        .table-header {
-            background-color: rgba(229, 9, 20, 0.8);
-        }
-        .table-row:hover {
-            background-color: rgba(229, 9, 20, 0.1);
-        }
-        
-        .stranger-title {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #E50914;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        }
-        
-        .btn-netflix {
-            background-color: #E50914;
-            transition: all 0.2s ease;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-netflix:hover {
-            background-color: #F40612;
-        }
-        
-        .netflix-input {
-            background-color: #333;
-            border: none;
-            color: white;
-            padding: 12px;
-            border-radius: 4px;
-        }
-
-        .netflix-input:focus {
-            background-color: #454545;
-            outline: none;
-        }
-    </style>
     
 </head>
 

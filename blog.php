@@ -16,13 +16,15 @@
 
 
     // Obtener entrada individual si se solicita
-    $entradaIndividual = null;
+    $entradaIndividual=null;
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
         $entradaIndividual = $modeloEntradas->obtenerPorId($id);
     }
+    
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -33,68 +35,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
-    <style>
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        @font-face {
-            font-family: 'Netflix Sans';
-            src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2') format('woff2');
-            font-weight: bold;
-            font-style: normal;
-        }
-        
-        body {
-            font-family: 'Netflix Sans', sans-serif;
-        }
-        
-        .blog-bg {
-            background-color: #000;
-            background-image: 
-                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('assets/imgs/stranger-things-4k-d22h0coz6j6ph0e7.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-        
-        .post-card {
-            background-color: rgba(20, 20, 20, 0.9);
-            border: 1px solid rgba(229, 9, 20, 0.2);
-            box-shadow: 0 0 15px rgba(229, 9, 20, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(229, 9, 20, 0.3);
-        }
-        
-        .stranger-title {
-            font-family: 'Bebas Neue', sans-serif;
-            color: #E50914;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
-        }
-        
-        .btn-netflix {
-            background-color: #E50914;
-            transition: all 0.2s ease;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-
-        .btn-netflix:hover {
-            background-color: #F40612;
-        }
-        .post-category {
-            background-color: rgba(229, 9, 20, 0.7);
-        }
-    </style>
 </head>
 
 <body class="blog-bg text-white min-h-screen">
@@ -107,7 +47,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <h1 class="stranger-title">
-                        <img src="assets/imgs/logo.png" alt="Stranger Things" style="height: 50px; width: auto; max-width: 200px; object-fit: contain;">
+                        <img src="assets/imgs/logo.png" alt="Stranger Things" class="logo-image">
                     </h1>
                 </div>
                 <div class="flex items-center space-x-4">

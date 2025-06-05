@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Benguiat+Bold&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+/* Fuentes Netflix */
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
 
 :root{
     --netflix-red: #E50914;
@@ -18,7 +32,7 @@
 
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Netflix Sans', 'Montserrat', sans-serif;
     background-color: var(--netflix-black);
     color: white;
 }
@@ -115,5 +129,101 @@ a.netflix-link:hover {
 
 .flicker {
     animation: flicker 2s infinite;
+}
+
+
+/* Estilos para el fondo de la página de login/registro */
+.netflix-bg {
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                     url("../assets/imgs/temporada 5 stranger things.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contenedor del formulario de login/registro */
+.login-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo para inputs de formularios */
+.netflix-input {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 4px;
+}
+
+.netflix-input:focus {
+    background-color: #454545;
+    outline: none;
+}
+
+/* Estilo específico para títulos de Stranger Things */
+.stranger-title {
+    font-family: 'Bebas Neue', 'Benguiat Bold', sans-serif;
+    color: #E50914;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+}
+
+/* Estilo para imágenes de logo */
+.logo-image {
+    height: 80px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+}
+
+/* Estilos para el fondo del blog */
+.blog-bg {
+    background-color: #000;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('../assets/imgs/temporada 5 stranger things.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilos para tarjetas de entradas del blog */
+.post-card {
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.1);
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(229, 9, 20, 0.3);
+}
+
+.post-category {
+    background-color: rgba(229, 9, 20, 0.7);
+}
+
+/* Estilos para el dashboard */
+.dashboard-bg {
+    background-color: #141414;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+
+.content-card {
+    background-color: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(229, 9, 20, 0.3);
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.2);
+}
+
+.table-header {
+    background-color: rgba(229, 9, 20, 0.8);
+}
+
+.table-row:hover {
+    background-color: rgba(229, 9, 20, 0.1);
 }
 
