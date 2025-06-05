@@ -1,6 +1,6 @@
 <?php
 
-require_once("db/conexionDatabase.php");
+require_once(__DIR__ . "/../db/conexionDatabase.php");
 
 
 class Usuario{
@@ -21,9 +21,16 @@ class Usuario{
         $consulta->execute([$email]);
         $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
-        //verifico si se encontró el usuario y si la contraseña coincide
-        if($usuario && $password === $usuario['password']) {
-            return $usuario;
+        // Verificar si se encontró el usuario
+        if($usuario) {
+            // Para usuarios existentes que no tienen hash en la contraseña
+            if($password === $usuario['password']) {
+                return $usuario;
+            }
+            // Para nuevos usuarios que tienen contraseña con hash
+            else if(password_verify($password, $usuario['password'])) {
+                return $usuario;
+            }
         }
 
         return false;

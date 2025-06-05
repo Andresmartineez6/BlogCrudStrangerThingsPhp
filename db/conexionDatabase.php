@@ -7,7 +7,7 @@ class DataBase{
 
     // Parámetros de la base de datos
     private $host = "localhost"; 
-    private $db_name = "blog_crud_razer";
+    private $db_name = "stranger_things_blog";
     private $username = "root";
     private $password = "";
     public $db;
