@@ -12,9 +12,9 @@
 
 <p align="center">Un portal al Mundo del Revés - Blog temático sobre la serie Stranger Things con dashboard administrativo para gestión de contenidos.</p>
 
-## 📺 Vista previa
+## 📺Vista previa
 
-### ⚡️ Inicio y Login
+### Inicio y Login
 Una experiencia de login oscura y temática con el estilo característico de la serie.
 
 <div align="center">  
